@@ -1,0 +1,16 @@
+/*
+ * COLORS: colores base usados en la aplicación
+ */
+:root {
+  --white: #fff;
+  --black: #000;
+  --purple-100: #d6bbfc;
+  --purple-200: #c090fa;
+  --purple-300: #a763f8;
+  --purple-400: #8e31f6;
+  --purple-500: #6b1bf4;
+  --green: #008a05;
+  --blue: #004cc4;
+  --skyblue:#00a4e2;
+  --red:#ff5e5b;
+}
