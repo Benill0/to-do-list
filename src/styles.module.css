@@ -1,0 +1,23 @@
+.container { 
+  display: grid;
+  padding: 20px 0;
+  & > h1{
+    font-size: var(--text-3xl);
+    font-weight: var(--font-bold);
+    text-align: center;
+  }  
+}
+
+.buttonForm {
+  width: min(160px, 100%);
+  background-color: var(--purple-400);
+  color: var(--white);
+  padding: 10px 0px;
+  border-radius: var(--rounded);
+  transition: all 200ms ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+    background-color: var(--purple-500);
+  }
+}
