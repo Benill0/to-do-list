@@ -1,6 +1,6 @@
 .form {
   display: grid;
-  width: min(500px, 100% - 20px);
+  width: min(400px, 100% - 20px);
   margin: auto;
   gap: 20px;
   background-color: var(--container-color);
@@ -13,6 +13,7 @@
   display: grid;
 
   & > label {
+    color: white;
     margin-bottom: 3px;
     font-size: var(--text-base);
     font-weight: var(--font-medium);

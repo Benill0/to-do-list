@@ -1,9 +1,12 @@
 .container { 
   display: grid;
   padding: 20px 0;
+  gap: 20px;
+
   & > h1{
     font-size: var(--text-3xl);
     font-weight: var(--font-bold);
+    padding: 20px 0;
     text-align: center;
   }  
 }

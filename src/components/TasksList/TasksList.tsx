@@ -5,7 +5,13 @@ import { TTask } from '@/types/task'
 import { FaEdit } from "react-icons/fa"
 import { MdDelete } from "react-icons/md"
 
-export default function TasksList({ data }: { data: TTask[] }) {
+interface TaskListProps {
+  data : TTask[],
+  editTask: (id?: string) => void
+  deleteTask: (id?: string) => void
+}
+
+export default function TasksList({data, editTask, deleteTask}: TaskListProps) {
   return (
     <div className={styles.list}>
       {data.map((task: TTask) =>
@@ -17,8 +23,8 @@ export default function TasksList({ data }: { data: TTask[] }) {
             <p>{task.description}</p>
           </div>
           <div className={styles.containerButton}>
-            <button><FaEdit /> Editar</button>
-            <button><MdDelete /> Eliminar</button>
+            <button onClick={()=>editTask(task?.id)} ><FaEdit /> Editar</button>
+            <button onClick={()=>deleteTask(task?.id)} ><MdDelete /> Eliminar</button>
           </div>
         </div>
       )}
