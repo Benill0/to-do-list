@@ -29,7 +29,7 @@ export default function useCrud() {
   const deleteTask = (uuid: string) => {
     setTasks((prev: TTask[]) => {
       const updateTasks = prev.filter(task => task.id !== uuid)
-      localStorage.setItem('task', JSON.stringify(updateTasks))
+      localStorage.setItem('tasks', JSON.stringify(updateTasks))
       return updateTasks
     })
   }
