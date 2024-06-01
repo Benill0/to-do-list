@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { TTask } from '../type/task'
+import { TTask } from '../types/task'
 import { generateUUID } from './../utilities/generate-uuid'
 
 export default function useCrud() {
