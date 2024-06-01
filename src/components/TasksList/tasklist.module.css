@@ -1,0 +1,59 @@
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(400px, 100%), 1fr));
+  gap: 20px;
+  width: min(1400px, 100%);
+  margin: auto;
+  margin-top: 40px;
+  padding: 10px;
+}
+
+.task {
+  justify-self: center;
+  display: grid;
+  width: min(400px, 100%);
+  background-color: var(--container-color);
+  border-radius: var(--rounded-lg);
+  gap: 10px;
+  padding: 20px;
+}
+
+.taskInfo {
+  display: grid;
+  align-content: start;
+  overflow: hidden;
+  gap: 5px;
+
+  & > :nth-child(2) {
+    min-height: 48px;
+  }
+
+  & > :nth-child(4) {
+    min-height: 120px;
+  } 
+}
+
+.containerButton {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px 0;
+
+  & > button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: min(160px, 100%);
+    padding: 10px 0;
+    background-color: var(--purple-400);
+    color:var(--white);
+    transition: all 400ms ease-in-out;
+    border-radius: var(--rounded-md);
+  }
+
+  & > button:hover{
+    transform: scale(1.05);
+    background-color: var(--purple-500);
+  }
+}
