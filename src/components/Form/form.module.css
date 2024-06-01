@@ -1,0 +1,38 @@
+.form {
+  display: grid;
+  width: min(500px, 100% - 20px);
+  margin: auto;
+  gap: 20px;
+  background-color: var(--container-color);
+  padding: 20px;
+  border-radius: var(--rounded-lg);
+  border: 1px ;
+}
+
+.containerInput {
+  display: grid;
+
+  & > label {
+    margin-bottom: 3px;
+    font-size: var(--text-base);
+    font-weight: var(--font-medium);
+  }
+
+  & input {
+    padding: 7px;
+    border: 1px solid rgb(80 80 80);
+    border-radius: var(--rounded);
+    background: var(--white);
+    color: var(--black);
+    transition: opacity 0.5s ease-out;
+
+    &:disabled {
+      opacity: 0.4;
+    }
+  }
+}
+
+.containerButton {
+  display: flex;
+  justify-content: center;
+}
