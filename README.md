@@ -14,7 +14,7 @@ This application is designed with responsiveness in mind, ensuring a seamless us
 
 ## Deployed Project
 
-You can access the deployed version of this project [here]([https://example.com](https://benill0.github.io/to-do-list/)).
+You can access the deployed version of this project [here](https://benill0.github.io/to-do-list/).
 
 
 
