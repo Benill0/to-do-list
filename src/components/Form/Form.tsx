@@ -1,7 +1,7 @@
 import styles from './form.module.css'
 
 import { TTask } from '@/types/task'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { INITIAL_FORMM } from '@/constants/form.constant'
 
 interface FormProps {
@@ -12,15 +12,19 @@ interface FormProps {
 
 export default function Form({ task, getFormValues, children }: FormProps) {
   const [form, setForm] = useState<TTask>(task)
+  const [prevTask, setPrevTask] = useState<TTask>(task)
+
+  // Sincroniza el formulario cuando cambia la tarea seleccionada, sin usar useEffect.
+  // Patrón recomendado por React: https://react.dev/learn/you-might-not-need-an-effect#adjusting-some-state-when-a-prop-changes
+  if (task !== prevTask) {
+    setPrevTask(task)
+    setForm(task)
+  }
 
   const handleChangeValue = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value, id } = e.target
     setForm((prev: TTask) => ({ ...prev, [id]: value }))
   }
-
-  useEffect(() => {
-    if (task) setForm(task)
-  }, [task])
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
